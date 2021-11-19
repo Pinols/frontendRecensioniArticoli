@@ -6,19 +6,22 @@ import { AppComponent } from './app.component';
 import { ArticoloComponent } from './articolo/articolo.component';
 import { RecensioneComponent } from './recensione/recensione.component';
 import {HttpClientModule} from "@angular/common/http";
+import { RecensioniarticoloComponent } from './recensioniarticolo/recensioniarticolo.component';
+import {recartService} from "./recensioniarticolo/recart.service";
 
 @NgModule({
   declarations: [
     AppComponent,
     ArticoloComponent,
-    RecensioneComponent
+    RecensioneComponent,
+    RecensioniarticoloComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     HttpClientModule
   ],
-  providers: [],
+  providers: [recartService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

@@ -1,0 +1,31 @@
+<div class="container" >
+  <div class="row" >
+    <div class="col-4">
+      <table style="float: left;">
+        <thead>
+        <tr>
+          <td>Articoli</td>
+        </tr>
+        </thead>
+        <tbody>
+        <tr *ngFor="let art of articoli">
+          <button class="btn btn-primary" (click)="showRecensioni(art)">{{art.nome+" "}}{{art.prezzo}}</button>
+        </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="col-4">
+      <table style="float: right;">
+        <tr>
+          <td>Recensioni {{articoloScelto.nome}}</td>
+        </tr>
+        <tr *ngFor="let rec of articoloScelto.recensioni">{{rec.contenuto}}</tr>
+      </table>
+    </div>
+  </div>
+</div>
+
+
+
+
